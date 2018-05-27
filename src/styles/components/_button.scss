@@ -1,0 +1,60 @@
+.button {
+    background: $bright-blue;
+    border: none;
+    box-shadow: 0 .3rem darken($bright-blue, 10);
+    color: #FFF;
+    font-weight: 500;
+    padding: $s-size;
+    transition: all .3s ease;
+    &:hover {
+        background: darken($bright-blue, 5);
+    }
+    &:active {
+        box-shadow: 0 .1rem darken($bright-blue, 15);
+        transform: translateY(.2rem);
+    }
+}
+
+.button--big {
+    box-shadow: 0 .6rem darken($bright-blue, 10);
+    font-size: $l-size;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: $m-size;
+    padding: 2.2rem;
+    @media (min-width: $desktop-breakpoint) {
+        margin-bottom: $xl-size;        
+    }
+    &:active {
+        box-shadow: 0 .3rem darken($bright-blue, 15);
+        transform: translateY(.3rem);
+    }
+}
+
+.button--big:disabled {
+    opacity: .6;
+}
+
+.button--link {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: $off-white;
+    margin-left: $m-size;
+    padding: 0;
+    &::after {
+        background: $bright-blue;
+        content: '';
+        display: block;
+        height: .2rem;
+        transition: width .3s ease;
+        width: 0;
+    }
+    &:hover {
+        background: none;
+        color: darken($off-white, 10);
+        &::after {
+            width: 100%;
+        }
+    }
+}

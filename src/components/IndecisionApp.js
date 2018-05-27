@@ -41,10 +41,12 @@ export default class IndecisionApp extends React.Component {
         return (
             <div>
                 <Header title='Indecision' subtitle='What should you do?'/>
-                <div>
+                <div className='content-container'>
                     <Pick disabled={this.state.options.length === 0} handlePick={this.handlePick}/>
-                    <Options options={this.state.options} handleRemoveOption={this.handleRemoveOption} handleRemoveOptions={this.handleRemoveOptions}/>
-                    <AddOption handleAdd={this.handleAdd}/>
+                    <div className='list'>
+                        <Options options={this.state.options} handleRemoveOption={this.handleRemoveOption} handleRemoveOptions={this.handleRemoveOptions}/>
+                        <AddOption handleAdd={this.handleAdd}/>
+                    </div>
                 </div>
                 <Selected selected={this.state.selected} handleClearSelected={this.handleClearSelected} />
             </div>

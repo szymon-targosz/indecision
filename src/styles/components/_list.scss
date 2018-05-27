@@ -1,0 +1,21 @@
+.list {
+    background: $light-blue;
+    margin-bottom: $xl-size;
+    &__header {
+        background: $blue;
+        color: $off-white;
+        display: flex;
+        justify-content: space-between;
+        padding: $m-size;
+    }
+    &__title {
+        margin: 0;
+    }
+    &__message {
+        border-bottom: .1rem solid lighten($light-blue, 10);
+        color: $off-white;
+        padding: $l-size;
+        margin: 0;
+        text-align: center;
+    }
+}
